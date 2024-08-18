@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34916.146
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContentWarningEditor", "ContentWarningEditor\ContentWarningEditor.csproj", "{201F7A66-F070-4D6D-85AB-750FB78A0E5D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{201F7A66-F070-4D6D-85AB-750FB78A0E5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{201F7A66-F070-4D6D-85AB-750FB78A0E5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{201F7A66-F070-4D6D-85AB-750FB78A0E5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{201F7A66-F070-4D6D-85AB-750FB78A0E5D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D43F32BC-2CD7-434D-A370-BA445FF66A15}
+	EndGlobalSection
+EndGlobal
