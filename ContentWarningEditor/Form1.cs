@@ -22,7 +22,7 @@ namespace ContentWarningEditor
         public Form1()
         {
             InitializeComponent();
-            Debug.WriteLine(filePath);
+            
         }
 
         void updateFace()
@@ -31,9 +31,23 @@ namespace ContentWarningEditor
             {
                 RegistryKey currentUserKey = Registry.CurrentUser;
                 RegistryKey faceTextKey = currentUserKey.OpenSubKey("Software\\Landfall Games\\Content Warning", true);
-                faceTextKey.SetValue("FaceText_h3883740665", this.textBox1.Text);
+                byte[] bytes = ConvertHexStringToByteArray(this.textBox1.Text);
+                faceTextKey.SetValue("FaceText_h3883740665", bytes, RegistryValueKind.Binary);
+                
                 faceTextKey.Close();
             }
+        }
+        static byte[] ConvertHexStringToByteArray(string hex)
+        {
+            string[] hexValuesSplit = hex.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            byte[] bytes = new byte[hexValuesSplit.Length];
+
+            for (int i = 0; i < hexValuesSplit.Length; i++)
+            {
+                bytes[i] = Convert.ToByte(hexValuesSplit[i], 16);
+            }
+
+            return bytes;
         }
 
         void updateMeatCoins()
